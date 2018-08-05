@@ -11,6 +11,7 @@ contracts/fisheries/
   fisheries.abi
   fisheries.wasm
   fisheries.wast
+```bash
 ## Entities
 ```bash
 contracts/entities/
