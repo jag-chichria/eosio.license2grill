@@ -28,8 +28,8 @@ cleos wallet create
 cleos wallet open
 cleos wallet unlock --password <Password>
 ```
-
-##Create account controller
+## Create Accounts 
+### controller
 ```bash
   cleos create key
   cleos create key
@@ -39,7 +39,7 @@ cleos wallet unlock --password <Password>
 ```
 
 
-## Create account authority1
+### authority1
 ```bash
   cleos create key
   cleos create key
@@ -48,7 +48,7 @@ cleos wallet unlock --password <Password>
   cleos create account eosio authority <Public Key 1> <Public Key 2>
 ```
 
-## Create account authority2
+### authority2
 ```bash
   cleos create key
   cleos create key
@@ -58,48 +58,49 @@ cleos wallet unlock --password <Password>
 ```
 
 
-## Create account fisher1
+### fishery1
 ```bash
   cleos create key
   cleos create key
   cleos wallet import --private-key <Private Key 1>
   cleos wallet import --private-key <Private Key 2>
-  cleos create account eosio fisher <Public Key 1> <Public Key 2>
+  cleos create account eosio fishery1 <Public Key 1> <Public Key 2>
 ```
 
 
-## Create account fisher2
+### fishery2
 ```bash
   cleos create key
   cleos create key
   cleos wallet import --private-key <Private Key 1>
   cleos wallet import --private-key <Private Key 2>
-  cleos create account eosio fisher <Public Key 1> <Public Key 2>
+  cleos create account eosio fishery2 <Public Key 1> <Public Key 2>
 ```
 
 
-## Create account fisher3
+### fishery3
 ```bash
   cleos create key
   cleos create key
   cleos wallet import --private-key <Private Key 1>
   cleos wallet import --private-key <Private Key 2>
-  cleos create account eosio fisher <Public Key 1> <Public Key 2>
+  cleos create account eosio fishery3 <Public Key 1> <Public Key 2>
 ```
 
-## Generate wasm and abi
+## Smart Contract
+### Generate 
 ```bash
   eosiocpp -o fisheries/fisheries.wasm fisheries/fisheries.cpp
   eosiocpp -g fisheries/fisheries.abi fisheries/fisheries.cpp
 ```
 
-## Assign a smart contract between authority and fishery
+### Assign a smart contract between authority and fishery
 ```bash
   cleos set contract authority /fisheries -p fisher@active
 ```  
 
-
-## token issuer account
+## Smart Contractors Token Issuer Account
+### token issuer
 ```bash
   cleos create key
   cleos create key
@@ -115,7 +116,7 @@ cleos wallet unlock --password <Password>
   cleos push action lictogrl.token create '{"issuer":"license2grill", "maximum_supply":"500000000.0000 HAK"}' -p eosio.token@active
 ```
 
-### Assign new tokens to the accounts
+### Assign new tokens to the resective authorities as for margins and estimates. 
 ```bash
   cleos push action lictogrl.token issue '[ "authority1", "250000.0000 HAK", "Issued today to authoriy1" ]' -p authority1
   cleos push action lictogrl.token issue '[ "authority2", "500000.0000 HAK", "Issued today to authoriy1" ]' -p authority2
