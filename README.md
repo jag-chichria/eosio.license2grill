@@ -116,6 +116,7 @@ cleos wallet unlock --password <Password>
 ```
 
 ### Assign new tokens to the accounts
+```bash
   cleos push action lictogrl.token issue '[ "authority1", "250000.0000 HAK", "Issued today to authoriy1" ]' -p authority1
   cleos push action lictogrl.token issue '[ "authority2", "500000.0000 HAK", "Issued today to authoriy1" ]' -p authority2
-
+```
