@@ -1,20 +1,24 @@
 
 
-2 contracts - fisheries.cpp and entities.cpp 
+# 2 contracts - fisheries.cpp and entities.cpp 
 
 Although there will mulitple smart contracts between the 2 entities, we will focus on fisheries.cpp
 
+## Fisheries
+```bash
 contracts/fisheries/
   fisheries.cpp
   fisheries.abi
   fisheries.wasm
   fisheries.wast
+## Entities
+```bash
 contracts/entities/
   entities.cpp
   entities.abi
   entities.wasm
   entities.wast
-  
+```bash  
   
   usage:
   
