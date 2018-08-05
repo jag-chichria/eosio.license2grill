@@ -111,12 +111,15 @@ cleos wallet unlock --password <Password>
   cleos set contract lictogrl.token /contracts/eosio.token -p lictogrl.token
 ```
 
-### this need changes to support more contract attributes how due to time constraint going ahead with the scaffold.
+### Create Token  
+Please note: This will changes to support more contract attributes how due to time constraint going ahead with the scaffold.
+#### possible attributes - memberunreg, memberreg, issuerdate, expiry, ...
 ```bash
   cleos push action lictogrl.token create '{"issuer":"license2grill", "maximum_supply":"500000000.0000 HAK"}' -p eosio.token@active
 ```
 
-### Assign new tokens to the resective authorities as for margins and estimates. 
+###  Token assignment
+Assign new tokens to the resective authorities as for margins and estimates.
 ```bash
   cleos push action lictogrl.token issue '[ "authority1", "250000.0000 HAK", "Issued today to authoriy1" ]' -p authority1
   cleos push action lictogrl.token issue '[ "authority2", "500000.0000 HAK", "Issued today to authoriy1" ]' -p authority2
